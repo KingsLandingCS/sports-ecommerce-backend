@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // Import the routes
 const productRoutes = require("./routes/productRoutes");
 const orderRoutes = require("./routes/orderRoutes");
@@ -7,7 +9,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-require("dotenv").config();
+
 
 // Create an instance of Express
 const app = express();
