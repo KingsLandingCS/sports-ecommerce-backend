@@ -20,7 +20,7 @@ app.use(cors());
 
 // MongoDB connection
 mongoose
-    .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB connected"))
     .catch((err) => console.log(err));
 
@@ -32,5 +32,5 @@ app.listen(PORT, () => {
 
 
 // Use the routes
-app.use("/api/Products", productRoutes);
+app.use("/api/products", productRoutes);
 app.use("/api/orders", orderRoutes);
